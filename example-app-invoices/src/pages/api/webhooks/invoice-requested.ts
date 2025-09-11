@@ -165,6 +165,8 @@ export const handler: NextJsWebhookHandler<
   logger.info({ orderId: order.id }, "Received event INVOICE_REQUESTED");
   logger.debug(order, "Order from payload:");
 
+  logger.info({ apl: saleorApp.apl }, "APL");
+
   const orderId = order.id;
   /**
    * TODO -> should generate from generation date or order date?
